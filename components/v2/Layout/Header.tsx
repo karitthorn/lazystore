@@ -9,7 +9,6 @@ import {
 import BookTypeMenu from 'components/v2/Layout/BookTypeMenu';
 import { shoppingCartState } from 'atoms';
 import { useRecoilState } from 'recoil';
-
 import { calcCartItemSum } from 'lib/utils';
 
 export interface HeaderProps {
@@ -19,7 +18,6 @@ export interface HeaderProps {
 export default function Header(props: HeaderProps) {
   const { hideMenu } = props;
 
-  const [shoppingCart, setShoppingCart] = useRecoilState(shoppingCartState);
 
   return (
     <>
@@ -39,26 +37,13 @@ export default function Header(props: HeaderProps) {
         </div>
         <div className='navbar-center'>
           <NextLink href='/' className='btn btn-ghost normal-case text-xl'>
-            <BookOpenIcon className='w-6 h-6' />
-            Bookstore
+            💤 LazyStore
           </NextLink>
         </div>
         <div className='navbar-end'>
-          <NextLink href='/cart' className='btn btn-ghost btn-circle'>
-            <div className='indicator'>
-              <ShoppingCartIcon className='w-6 h-6' />
-              <span className='badge badge-sm indicator-item'>
-                {calcCartItemSum(shoppingCart)}
-              </span>
-            </div>
+          <NextLink href='https://github.com/karitthorn/lazystore' className='btn btn-outline'>
+              Add your plugin
           </NextLink>
-
-          {/* <button className='btn btn-ghost btn-circle'>
-              <div className='indicator'>
-                <UserIcon className='w-6 h-6' />
-                <span className='badge badge-xs badge-primary indicator-item'></span>
-              </div>
-            </button> */}
         </div>
       </div>
     </>

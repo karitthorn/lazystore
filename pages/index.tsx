@@ -22,7 +22,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Bookstore Home</title>
+        <title>LazyStore</title>
         <meta name='description' content='Bookstore Home Page' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
